@@ -16,11 +16,11 @@ class CommentCard extends StatelessWidget {
             backgroundImage: NetworkImage(
               comment['profilePic'],
             ),
-            radius: 18,
+            radius: 20,
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 16),
+              padding: const EdgeInsets.only(left: 18),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +31,7 @@ class CommentCard extends StatelessWidget {
                         TextSpan(
                             text: comment['name'],
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: Colors.grey,
                               fontWeight: FontWeight.bold,
                             )),
                         TextSpan(
@@ -42,13 +42,13 @@ class CommentCard extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 4),
+                    padding: const EdgeInsets.only(top: 6),
                     child: Text(
                       DateFormat.yMMMd().format(
                         comment['datePublished'].toDate(),
                       ),
                       style: const TextStyle(
-                        fontSize: 12,
+                        fontSize: 14,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
