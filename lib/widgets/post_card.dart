@@ -128,7 +128,7 @@ class _PostCardState extends State<PostCard> {
                                   return Dialog(
                                     child: ListView(
                                         padding: const EdgeInsets.symmetric(
-                                            vertical: 16),
+                                            vertical: 18),
                                         shrinkWrap: true,
                                         children: [
                                           'Delete',
@@ -138,8 +138,8 @@ class _PostCardState extends State<PostCard> {
                                                   child: Container(
                                                     padding: const EdgeInsets
                                                             .symmetric(
-                                                        vertical: 12,
-                                                        horizontal: 16),
+                                                        vertical: 14,
+                                                        horizontal: 18),
                                                     child: Text(e),
                                                   ),
                                                   onTap: () {
@@ -249,7 +249,7 @@ class _PostCardState extends State<PostCard> {
               ),
               //DESCRIPTION AND NUMBER OF COMMENTS
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 14),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -258,7 +258,7 @@ class _PostCardState extends State<PostCard> {
                         style: Theme.of(context)
                             .textTheme
                             .subtitle2!
-                            .copyWith(fontWeight: FontWeight.w800),
+                            .copyWith(fontWeight: FontWeight.w900),
                         child: Text(
                           '${widget.snap['likes'].length} likes',
                           style: Theme.of(context).textTheme.bodyText2,
@@ -291,7 +291,7 @@ class _PostCardState extends State<PostCard> {
                         child: Text(
                           'View all $commentLen comments',
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 18,
                             color: secondaryColor,
                           ),
                         ),
@@ -305,7 +305,7 @@ class _PostCardState extends State<PostCard> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      padding: const EdgeInsets.symmetric(vertical: 5),
                       child: Text(
                         DateFormat.yMMMd()
                             .format(widget.snap['datePublished'].toDate()),
