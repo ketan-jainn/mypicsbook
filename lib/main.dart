@@ -17,8 +17,6 @@ void main() async {
     await Firebase.initializeApp(
       options: kFirebaseOptions,
     );
-  } else {
-    await Firebase.initializeApp();
   }
 
   runApp(const MyApp());
