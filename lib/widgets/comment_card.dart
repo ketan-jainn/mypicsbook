@@ -9,18 +9,18 @@ class CommentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
       child: Row(
         children: [
           CircleAvatar(
             backgroundImage: NetworkImage(
               comment['profilePic'],
             ),
-            radius: 20,
+            radius: 23,
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 18),
+              padding: const EdgeInsets.only(left: 21),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -29,13 +29,13 @@ class CommentCard extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                            text: comment['name'],
+                            text: comment['Enter the name'],
                             style: const TextStyle(
                               color: Colors.grey,
                               fontWeight: FontWeight.bold,
                             )),
                         TextSpan(
-                          text: ' ${comment['text']}',
+                          text: ' ${comment['Enter the text']}',
                           style: const TextStyle(color: Colors.white),
                         ),
                       ],
@@ -48,8 +48,8 @@ class CommentCard extends StatelessWidget {
                         comment['datePublished'].toDate(),
                       ),
                       style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   )
